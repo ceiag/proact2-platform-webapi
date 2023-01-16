@@ -1,0 +1,87 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32319.34
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Proact.Services", "PROACTServer\Proact.Services.csproj", "{E7F7728D-2C0F-4FD2-BA1C-7973CC00D796}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0FBE3386-885A-4FB5-AD9D-BD5468F01C96}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Proact.Services.FunctionalTests", "Proact.Services.FunctionalTests\Proact.Services.FunctionalTests.csproj", "{3E3886EF-CE41-4189-A1EB-F0C0EDF3A750}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Proact.Services.Tests.Shared", "Proact.Services.Tests.Shared\Proact.Services.Tests.Shared.csproj", "{753E598E-AD64-4DB7-9404-CE908A7A7CFB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AutomatedTests", "AutomatedTests", "{244F2150-F20D-4F46-BF22-8E9FC44B341C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Proact.Services.UnitTests", "Proact.Services.UnitTests\Proact.Services.UnitTests.csproj", "{F6DEB063-D7FE-4A6E-82F2-956CB9B404A1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Proact.Services.IntegrationTests", "Proact.Services.IntegrationTests\Proact.Services.IntegrationTests.csproj", "{70F8E3E5-1D68-49A3-B474-8F26B962D207}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E7F7728D-2C0F-4FD2-BA1C-7973CC00D796}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7F7728D-2C0F-4FD2-BA1C-7973CC00D796}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7F7728D-2C0F-4FD2-BA1C-7973CC00D796}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7F7728D-2C0F-4FD2-BA1C-7973CC00D796}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E3886EF-CE41-4189-A1EB-F0C0EDF3A750}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E3886EF-CE41-4189-A1EB-F0C0EDF3A750}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E3886EF-CE41-4189-A1EB-F0C0EDF3A750}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E3886EF-CE41-4189-A1EB-F0C0EDF3A750}.Release|Any CPU.Build.0 = Release|Any CPU
+		{753E598E-AD64-4DB7-9404-CE908A7A7CFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{753E598E-AD64-4DB7-9404-CE908A7A7CFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{753E598E-AD64-4DB7-9404-CE908A7A7CFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{753E598E-AD64-4DB7-9404-CE908A7A7CFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6DEB063-D7FE-4A6E-82F2-956CB9B404A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6DEB063-D7FE-4A6E-82F2-956CB9B404A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6DEB063-D7FE-4A6E-82F2-956CB9B404A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6DEB063-D7FE-4A6E-82F2-956CB9B404A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70F8E3E5-1D68-49A3-B474-8F26B962D207}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70F8E3E5-1D68-49A3-B474-8F26B962D207}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70F8E3E5-1D68-49A3-B474-8F26B962D207}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70F8E3E5-1D68-49A3-B474-8F26B962D207}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3E3886EF-CE41-4189-A1EB-F0C0EDF3A750} = {244F2150-F20D-4F46-BF22-8E9FC44B341C}
+		{753E598E-AD64-4DB7-9404-CE908A7A7CFB} = {244F2150-F20D-4F46-BF22-8E9FC44B341C}
+		{F6DEB063-D7FE-4A6E-82F2-956CB9B404A1} = {244F2150-F20D-4F46-BF22-8E9FC44B341C}
+		{70F8E3E5-1D68-49A3-B474-8F26B962D207} = {244F2150-F20D-4F46-BF22-8E9FC44B341C}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7A28AB90-E0A8-49C0-B81C-AF5C1F7A021B}
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$0.TextStylePolicy = $2
+		$2.FileWidth = 80
+		$2.TabsToSpaces = True
+		$2.scope = text/x-csharp
+		$0.CSharpFormattingPolicy = $3
+		$3.IndentSwitchCaseSection = False
+		$3.NewLinesForBracesInTypes = False
+		$3.NewLinesForBracesInMethods = False
+		$3.NewLinesForBracesInProperties = False
+		$3.NewLinesForBracesInAccessors = False
+		$3.NewLinesForBracesInAnonymousMethods = False
+		$3.NewLinesForBracesInControlBlocks = False
+		$3.NewLinesForBracesInAnonymousTypes = False
+		$3.NewLinesForBracesInObjectCollectionArrayInitializers = False
+		$3.NewLinesForBracesInLambdaExpressionBody = False
+		$3.SpaceWithinMethodDeclarationParenthesis = True
+		$3.SpaceWithinMethodCallParentheses = True
+		$3.SpaceWithinExpressionParentheses = True
+		$3.SpaceWithinCastParentheses = True
+		$3.SpaceWithinOtherParentheses = True
+		$3.scope = text/x-csharp
+	EndGlobalSection
+EndGlobal

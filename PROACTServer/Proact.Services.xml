@@ -1,0 +1,1388 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Proact.Services</name>
+    </assembly>
+    <members>
+        <member name="M:Proact.Services.Controllers.AnalystConsole.AnalystConsoleController.GetMessagesFromPatient(System.Guid)">
+            <summary>
+            Get patient messages anonimized
+            </summary>
+            <param name="userId">Patient user id</param>
+            <returns>Message information</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.AnalystConsole.AnalystConsoleController.GetMessageDetailsFromPatient(System.Guid,System.Guid)">
+            <summary>
+            Get patient message details
+            </summary>
+            <param name="userId">Patient user id</param>
+            <param name="messageId">Message id</param>
+            <returns>Message information</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.AnalystConsole.AnalystConsoleController.GetMessageAnalysisResume(System.Guid)">
+            <summary>
+            Get an analysis resume for a message
+            </summary>
+            <param name="messageId">Message identifier</param>
+            <returns>Message Analysis informations</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.DataManagersController.CreateDataManager(Proact.Services.Models.DataManagers.CreateDataManagerRequest)">
+            <summary>
+            Create a DataManager
+            </summary>
+            <param name="request">Request model to create DataManager</param>
+            <returns>DataManager informations</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.DataManagersController.AssignDataManagerToMedicalTeam(System.Guid,Proact.Services.Models.DataManagers.AssignDataManagerToMedicalTeamRequest)">
+            <summary>
+            Assign DataManager to a Medical Team
+            </summary>
+            <param name="request">Request Body for Medical Team Assign</param>
+            <param name="medicalTeamId">Id of medical team</param>
+            <returns>Medic informations</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.DataManagersController.GetDataManagers(System.Guid)">
+            <summary>
+            Get list of DataManagers assigned to medical team
+            </summary>
+            <param name="medicalTeamId">Medical team identifier</param>
+            <returns>The list of DataManagers</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.DataManagersController.GetDataManagerAll">
+            <summary>
+            Return the list of DataManagers into the System
+            </summary>
+            <returns>DataManager information</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.DataManagersController.RemoveDataManagerFromMedicalTeam(System.Guid,System.Guid)">
+            <summary>
+            Delete DataManager from medical team
+            </summary>
+            <param name="medicalTeamId">Medical team identifier</param>
+            <param name="userId">User identifier of a medic</param>
+        </member>
+        <member name="M:Proact.Services.Controllers.Exporters.DataExportersController.GetExportedSurveyStatsOverTimeForPatient(System.Guid,System.Guid,System.String)">
+            <summary>
+            Get the stats over the time about a patient in csv format
+            </summary>
+            <param name="surveyId">Id of the Surveys</param>
+            <param name="userId">Id of the User</param>
+            <param name="format">supported: csv</param>
+            <returns>Stats of Survey</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.Exporters.DataExportersController.GetExportedAnalysisForPatient(System.Guid,System.String)">
+            <summary>
+            Export Analysis of a patient in desired format
+            </summary>
+            <param name="userId">Id of the User</param>
+            <param name="format">supported: csv</param>
+            <returns>Stats of Survey</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.Institutes.DocumentsController.UploadTermsAndConditions(Proact.Services.Models.DocumentCreationRequest)">
+            <summary>
+            Upload terms and conditions file for an Institute
+            </summary>
+            <param name="request">Body of the request</param>
+            <returns>Institute information</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.Institutes.DocumentsController.UploadPrivacyPolicy(Proact.Services.Models.DocumentCreationRequest)">
+            <summary>
+            Upload privacy policy file for an Institute
+            </summary>
+            <param name="request">Body of the request</param>
+            <returns>Institute information</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.Institutes.InstitutesController.Create(Proact.Services.Models.InstituteCreationRequest)">
+            <summary>
+            Create a new Institute in Open State
+            </summary>
+            <param name="instituteCreateRequest">Institute informations</param>
+            <returns>Institute information</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.Institutes.InstitutesController.Update(System.Guid,Proact.Services.Models.InstituteUpdateRequest)">
+            <summary>
+            Update an Institute in Open State
+            </summary>
+            <param name="instituteId">Institute Identifier</param>
+            <param name="instituteUpdateRequest">Institute informations</param>
+            <returns>Institute information</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.Institutes.InstitutesController.Close(System.Guid)">
+            <summary>
+            Close an Institute in Open State
+            </summary>
+            <param name="instituteId">Institute Identifier</param>
+        </member>
+        <member name="M:Proact.Services.Controllers.Institutes.InstitutesController.Open(System.Guid)">
+            <summary>
+            Open an Institute in Close State
+            </summary>
+            <param name="instituteId">Institute Identifier</param>
+        </member>
+        <member name="M:Proact.Services.Controllers.Institutes.InstitutesController.CreateAdmin(System.Guid,Proact.Services.Models.InstituteAdminCreationRequest)">
+            <summary>
+            Create Administrator for an Institute
+            </summary>
+            <param name="instituteId">Institute identifier</param>
+            <param name="adminCreationRequest">Admin assignation informations</param>
+        </member>
+        <member name="M:Proact.Services.Controllers.Institutes.InstitutesController.Get(System.Guid)">
+            <summary>
+            Returns details about Institute
+            </summary>
+            <param name="instituteId">Institute identifier</param>
+            <returns>Institute information</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.Institutes.InstitutesController.GetAll">
+            <summary>
+            Returns all Institutes
+            </summary>
+            <returns>List of Institutes present into the system</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.Institutes.InstitutesController.GetWhereImAdmin">
+            <summary>
+            Return Institute where I'm Admin
+            </summary>
+            <returns>Institute information</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.Institutes.InstitutesController.GetInstituteWhereImIn">
+            <summary>
+            Return Institute where I'm in
+            </summary>
+            <returns>Institute information</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.Institutes.ProtocolsController.AddProtocolToProject(System.Guid,Proact.Services.Models.ProtocolCreationRequest)">
+            <summary>
+            Upload protocol pdf file to the project
+            </summary>
+            <param name="projectId">Project indentifier</param>
+            <param name="request">Body of the request</param>
+            <returns>Protocol information</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.Institutes.ProtocolsController.AddProtocolToPatient(System.Guid,Proact.Services.Models.ProtocolCreationRequest)">
+            <summary>
+            Upload protocol pdf file to the patient
+            </summary>
+            <param name="userId">User indentifier</param>
+            <param name="request">Body of the request</param>
+            <returns>Protocol information</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.Institutes.ProtocolsController.GetProtocolFromPatient(System.Guid)">
+            <summary>
+            Get protocol pdf file url from a patient
+            </summary>
+            <param name="userId">User indentifier</param>
+            <returns>Protocol information</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.Institutes.ProtocolsController.GetUserProtocols">
+            <summary>
+            Get protocol pdf file url from me as patient
+            </summary>
+            <returns>Protocol information</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.Institutes.ProtocolsController.GetProtocolFromProject(System.Guid)">
+            <summary>
+            Get protocol pdf file url from a project
+            </summary>
+            <param name="projectId">Project indentifier</param>
+            <returns>Protocol information</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.MedicalTeamController.GetMedicalTeamsAssociatedToAProject(System.Guid)">
+            <summary>
+            Returns Medical Teams associated to a Project
+            </summary>
+            <param name="projectId">Project identifier</param>
+            <returns>The list of medical teams</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.MedicalTeamController.GetMedicalTeamAssociatedToMe">
+            <summary>
+            Returns information about medical team current user is member of either as a medic or a patient
+            </summary>
+            <returns>The list of medical teams</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.MedicalTeamController.GetMedicalTeamAssociatedToMe(System.Guid)">
+            <summary>
+            Returns information about medical team current user is member of either as a medic or a patient
+            </summary>
+            <param name="projectId">Project identifier</param>
+            <returns>The list of medical teams</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.MedicalTeamController.GetMedicalTeamsWhereImAdmin">
+            <summary>
+            Returns list of MedicalTeam where I'm administrator
+            </summary>
+            <returns>The list of medical teams</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.MedicalTeamController.GetMedicalTeam(System.Guid,System.Guid)">
+            <summary>
+            Returns information about medical team
+            </summary>
+            <param name="projectId">Project identifier</param>
+            <param name="medicalTeamId">Medical team identifier</param>
+            <returns>Medical team information</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.MedicalTeamController.CreateMedicalTeam(System.Guid,Proact.Services.Models.MedicalTeamCreateRequest)">
+            <summary>
+            Create a new medical team within the project
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST /Todo
+                {
+                    "phone": "3282612469",
+                    "addressLine1": "via stella 2",
+                    "addressLine2": "string",
+                    "city": "Cerignola",
+                    "stateOrProvince": "FG",
+                    "regionCode": "IT-GE",
+                    "postalCode": "71042",
+                    "country": "Italy",
+                    "timeZone": "GMT+1",
+                    "name": "TeamMedico00"
+                }
+                
+            </remarks>
+            <param name="projectId">Project identifier</param>
+            <param name="medicalTeamData">Medical team information</param>
+            <returns>Medical team information</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.MedicalTeamController.UpdateMedicalTeam(System.Guid,System.Guid,Proact.Services.Models.MedicalTeamUpdateRequest)">
+            <summary>
+            Updates medical team information
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST /Todo
+                {
+                    "phone": "3282612469",
+                    "addressLine1": "via le mani dal naso",
+                    "addressLine2": "string",
+                    "city": "Cerignola",
+                    "stateOrProvince": "FG",
+                    "regionCode": "IT-GE",
+                    "postalCode": "71042",
+                    "country": "Italy",
+                    "timeZone": "GMT+1",
+                    "name": "TeamMedico00"
+                }
+                
+            </remarks>
+            <param name="projectId">Project identifier</param>
+            <param name="medicalTeamId">Medical team identifier</param>
+            <param name="medicalTeamData">Medical team information</param>
+            <returns>Medical team information</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.MedicalTeamController.GetAdmins(System.Guid,System.Guid)">
+            <summary>
+            Get info of the user administrating medical team
+            </summary>
+            <param name="projectId">Project identifier</param>
+            <param name="medicalTeamId">Medical team identifier</param>
+            <returns>Medical team admin information</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.MedicalTeamController.AssignAdmin(System.Guid,System.Guid,System.Guid)">
+            <summary>
+            Assign medical team administrator
+            </summary>
+            <param name="projectId">Project identifier</param>
+            <param name="medicalTeamId">Medical team identifier</param>
+            <param name="userId">UserId</param>
+            <returns>Administrator information</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.MedicalTeamController.DeleteAdmin(System.Guid,System.Guid,System.Guid)">
+            <summary>
+            Delete medical team administrator
+            </summary>
+            <param name="projectId">Project identifier</param>
+            <param name="medicalTeamId">Medical team identifier</param>
+            <param name="userId">UserId</param>
+            <returns>Administrator information</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.MedicalTeamController.CloseMedicalTeam(System.Guid,System.Guid)">
+            <summary>
+            Close MedicalTeam
+            </summary>
+            <param name="medicalTeamId">Medical team identifier</param>
+            <param name="projectId">Project identifier</param>
+        </member>
+        <member name="M:Proact.Services.Controllers.MedicalTeamController.OpenMedicalTeam(System.Guid,System.Guid)">
+            <summary>
+            Open MedicalTeam
+            </summary>
+            <param name="medicalTeamId">Medical team identifier</param>
+            <param name="projectId">Project identifier</param>
+        </member>
+        <member name="M:Proact.Services.Controllers.MedicsController.GetMedics(System.Guid)">
+            <summary>
+            Get list of medics assigned to medical team
+            </summary>
+            <param name="medicalTeamId">Medical team identifier</param>
+            <returns>The list of medics</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.MedicsController.GetMedic(System.Guid,System.Guid)">
+            <summary>
+            Get medic information
+            </summary>
+            <param name="medicalTeamId">Medical team identifier</param>
+            <param name="userId">User identifier of a medic</param>
+            <returns>Medic information</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.MedicsController.GetMedicAll">
+            <summary>
+            Return the list of Medics into the System
+            </summary>
+            <returns>Medic information</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.MedicsController.CreateMedic(Proact.Services.Models.CreateMedicRequest)">
+            <summary>
+            Create a Medic
+            </summary>
+            <param name="createMedicRequest">Request model to create Medic</param>
+            <returns>Medic informations</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.MedicsController.AssignMedicToMedicalTeam(System.Guid,Proact.Services.Models.AssignMedicToMedicalTeamRequest)">
+            <summary>
+            Assign medic to a Medical Team
+            </summary>
+            <param name="request">Request Body for Medical Team Assign</param>
+            <param name="medicalTeamId">Id of medical team</param>
+            <returns>Medic informations</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.MedicsController.RemoveMedicFromMedicalTeam(System.Guid,System.Guid)">
+            <summary>
+            Delete medic from medical team
+            </summary>
+            <param name="medicalTeamId">Medical team identifier</param>
+            <param name="userId">User identifier of a medic</param>
+        </member>
+        <member name="M:Proact.Services.Controllers.LexiconsCategoryController.AddLexiconCategory(System.Guid,Proact.Services.Models.LexiconCategoryAdditionRequest)">
+            <summary>
+            Add a Category inside a existing Lexicon
+            </summary>
+            <param name="request">Data for adding new Category</param>
+            <param name="lexiconId">Lexicon identifier</param>
+        </member>
+        <member name="M:Proact.Services.Controllers.LexiconsCategoryController.SetOrderingOfCategories(System.Guid,Proact.Services.Models.LexiconCategorySetOrderingRequest)">
+            <summary>
+            Set Ordering of categories
+            </summary>
+            <param name="lexiconId">Lexicon identifier</param>
+            <param name="request">The order of categories defined by id</param>
+        </member>
+        <member name="M:Proact.Services.Controllers.LexiconsCategoryController.UpdateCategory(System.Guid,System.Guid,Proact.Services.Models.LexiconCategoryUpdateRequest)">
+            <summary>
+            Update category informations
+            </summary>
+            <param name="lexiconId">Lexicon identifier</param>
+            <param name="categoryId">Category identifier</param>
+            <param name="request">Data for update Category</param>
+        </member>
+        <member name="M:Proact.Services.Controllers.LexiconsCategoryController.GetCategory(System.Guid,System.Guid)">
+            <summary>
+            Get Category from a Lexicon
+            </summary>
+            <param name="lexiconId">Lexicon identifier</param>
+            <param name="categoryId">Category identifier</param>
+        </member>
+        <member name="M:Proact.Services.Controllers.LexiconsCategoryController.GetCategories(System.Guid)">
+            <summary>
+            Get Categories from a Lexicon
+            </summary>
+            <param name="lexiconId">Lexicon identifier</param>
+        </member>
+        <member name="M:Proact.Services.Controllers.LexiconsCategoryController.DeleteCategory(System.Guid,System.Guid)">
+            <summary>
+            Delete Category from a Lexicon
+            </summary>
+            <param name="lexiconId">Lexicon identifier</param>
+            <param name="categoryId">Category identifier</param>
+        </member>
+        <member name="M:Proact.Services.Controllers.LexiconLabelController.AddLexiconLabel(System.Guid,System.Guid,Proact.Services.Models.LexiconLabelCreationRequest)">
+            <summary>
+            Add a Label to Category inside a existing Lexicon
+            </summary>
+            <param name="lexiconId">Lexicon identifier</param>
+            <param name="categoryId">Category identifier</param>
+            <param name="request">Body of the request</param>
+        </member>
+        <member name="M:Proact.Services.Controllers.LexiconLabelController.UpdateLexiconLabel(System.Guid,System.Guid,System.Guid,Proact.Services.Models.LexiconLabelUpdateRequest)">
+            <summary>
+            Update a Label to Category inside a existing Lexicon
+            </summary>
+            <param name="lexiconId">Lexicon identifier</param>
+            <param name="categoryId">Category identifier</param>
+            <param name="labelId">Label identifier</param>
+            <param name="request">Body of the request</param>
+        </member>
+        <member name="M:Proact.Services.Controllers.LexiconLabelController.GetLexiconLabel(System.Guid,System.Guid,System.Guid)">
+            <summary>
+            Get a Label from a Category inside a existing Lexicon
+            </summary>
+            <param name="lexiconId">Lexicon identifier</param>
+            <param name="categoryId">Category identifier</param>
+            <param name="labelId">Label identifier</param>
+        </member>
+        <member name="M:Proact.Services.Controllers.LexiconLabelController.GetAllLexiconLabel(System.Guid,System.Guid)">
+            <summary>
+            Get all Labela from Category inside a existing Lexicon
+            </summary>
+            <param name="lexiconId">Lexicon identifier</param>
+            <param name="categoryId">Category identifier</param>
+        </member>
+        <member name="M:Proact.Services.Controllers.LexiconLabelController.DeleteLexiconLabel(System.Guid,System.Guid,System.Guid)">
+            <summary>
+            Delete a Label from a Category inside a existing Lexicon
+            </summary>
+            <param name="lexiconId">Lexicon identifier</param>
+            <param name="categoryId">Category identifier</param>
+            <param name="labelId">Label identifier</param>
+        </member>
+        <member name="M:Proact.Services.Controllers.LexiconsController.CreateLexicon(Proact.Services.Models.LexiconCreationRequest)">
+            <summary>
+            Create a Lexicon of terms
+            </summary>
+            <param name="request">Data to create Lexicon</param>
+            <returns>Message information</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.LexiconsController.GetLexicon(System.Guid)">
+            <summary>
+            Get Lexicon of terms
+            </summary>
+            <param name="lexiconId">Lexicon identifier</param>
+        </member>
+        <member name="M:Proact.Services.Controllers.LexiconsController.GetLexiconFromProjectId(System.Guid)">
+            <summary>
+            Get Lexicon of terms associated to a Project
+            </summary>
+            <param name="projectId">Project identifier</param>
+        </member>
+        <member name="M:Proact.Services.Controllers.LexiconsController.SetLexiconAsPublished(Proact.Services.Models.LexiconPublishRequest)">
+            <summary>
+            Set Lexicon as published
+            </summary>
+            <param name="request">Body of the request</param>
+        </member>
+        <member name="M:Proact.Services.Controllers.LexiconsController.GetLexicons">
+            <summary>
+            Get Lexicons of terms prenset into the system
+            </summary>
+        </member>
+        <member name="M:Proact.Services.Controllers.LexiconsController.DeleteLexicon(System.Guid)">
+            <summary>
+            Delete a Lexicon if is in a draw state
+            </summary>
+            <param name="lexiconId">Lexicon identifier</param>
+        </member>
+        <member name="M:Proact.Services.Controllers.MessageAnalysis.MessageAnalysisController.AddAnalysisToMessage(System.Guid,System.Guid,Proact.Services.Models.AnalysisCreationRequest)">
+            <summary>
+            Add an analysis to a message
+            </summary>
+            <param name="projectId">Project identifier</param>
+            <param name="medicalTeamId">Medical team identifier</param>
+            <param name="request">Data to add analysis to a message</param>
+            <returns>Message information</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.MessageAnalysis.MessageAnalysisController.AddAnalysisToMessage(System.Guid,Proact.Services.Models.AnalysisCreationRequest)">
+            <summary>
+            Add an analysis to a message
+            </summary>
+            <param name="messageId">Message identifier</param>
+            <param name="request">Data to add analysis to a message</param>
+            <returns>Message information</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.MessageAnalysis.MessageAnalysisController.DeleteAnalysisFromMessage(System.Guid,System.Guid,System.Guid)">
+            <summary>
+            Delete an analysis from a message
+            </summary>
+            <param name="projectId">Project identifier</param>
+            <param name="medicalTeamId">Medical team identifier</param>
+            <param name="analysisId">Analysis identifier</param>
+        </member>
+        <member name="M:Proact.Services.Controllers.MessageAnalysis.MessageAnalysisController.UpdateAnalysisFromMessage(System.Guid,System.Guid,System.Guid,Proact.Services.Models.AnalysisCreationRequest)">
+            <summary>
+            Update an analysis from a message
+            </summary>
+            <param name="projectId">Project identifier</param>
+            <param name="medicalTeamId">Medical team identifier</param>
+            <param name="analysisId">Analysis identifier</param>
+            <param name="request">Data to add analysis to a message</param>
+        </member>
+        <member name="M:Proact.Services.Controllers.MessageAnalysis.MessageAnalysisController.GetMessageAnalysisResume(System.Guid,System.Guid,System.Guid)">
+            <summary>
+            Get an analysis resume for a message
+            </summary>
+            <param name="projectId">Project identifier</param>
+            <param name="medicalTeamId">Medical team identifier</param>
+            <param name="messageId">Message identifier</param>
+            <returns>Message information</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.AttachmentsController.UploadAttachment(System.Guid,Proact.Services.Models.Messages.AttachmentType,Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            Upload message content
+            </summary>
+            <param name="messageId">Message identifier</param>
+            <param name="attachmentType">Type of Attachment: IMAGE: 0, VIDEO: 1, VOICE: 2 </param>
+            <param name="mediaFile">Media File</param>
+            <returns>Message information</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.AttachmentsController.GetMediaFileSASUriAms(System.Guid)">
+            <summary>
+            Retrieve the message with SAS Token
+            </summary>
+            <param name="messageId">Message identifier</param>
+            <returns>Uri with SAS token to get the media file</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.MessagesController.GetMessage(System.Guid,System.Guid,System.Guid)">
+            <summary>
+            Get a message of current user related to specified project
+            </summary>
+            <param name="projectId">Project identifier</param>
+            <param name="medicalTeamId">Medical team identifier</param>
+            <param name="messageId">MessageId to retrieve</param>
+            <returns>Message</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.MessagesController.GetUnrepliedMessages(System.Guid,System.Guid,System.Int32)">
+            <summary>
+            Get all messages of current user related to specified project without a reply
+            </summary>
+            <param name="projectId">Project identifier</param>
+            <param name="medicalTeamId">Medical team identifier</param>
+            <param name="pagingCount">Paging Count</param>
+            <returns>Messages list</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.MessagesController.GetMessagesListForPatient(System.Guid,System.Guid,System.Guid,System.Int32)">
+            <summary>
+            Get all messages from a patient
+            </summary>
+            <param name="projectId">Project identifier</param>
+            <param name="medicalTeamId">Medical team identifier</param>
+            <param name="userId">Id of the patient</param>
+            <param name="pagingCount">Paging Count</param>
+            <returns>Messages list</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.MessagesController.SearchMessagesAsPatient(System.Guid,System.Guid)">
+            <summary>
+            Get all messages from a patient using search parameters
+            </summary>
+            <param name="projectId">Project identifier</param>
+            <param name="medicalTeamId">Medical team identifier</param>
+            <returns>Messages list</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.MessagesController.SearchMessagesAsMedicalProfessionalWith(System.Guid,System.Guid)">
+            <summary>
+            Get all messages from a patient using search parameters
+            </summary>
+            <param name="projectId">Project identifier</param>
+            <param name="medicalTeamId">Medical team identifier</param>
+            <param name="message">Message to search</param>
+            <param name="fromDate">Starting date</param>
+            <param name="toDate">Ending date</param>
+            <returns>Messages list</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.MessagesController.GetMessages(System.Guid)">
+            <summary>
+            Get all messages inside a project
+            </summary>
+            <param name="medicalTeamId">MedicalTeam identifier</param>
+            <returns>Messages list</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.MessagesController.GetMessages(System.Guid,System.Guid,System.Int32)">
+            <summary>
+            Get all messages of current user related to specified project
+            </summary>
+            <param name="projectId">Project identifier</param>
+            <param name="medicalTeamId">Medical team identifier</param>
+            <param name="pagingCount">Paging Count</param>
+            <returns>Messages list</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.MessagesController.CreateNewTopicMessage(System.Guid,System.Guid,Proact.Services.Models.Messages.MessageRequestData)">
+            <summary>
+            Create a new message within a project where medical team can reply
+            </summary>
+            <param name="projectId">Project identifier</param>
+            <param name="medicalTeamId">Medical team identifier</param>
+            <param name="messageData">Message information</param>
+            <returns>Message information</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.MessagesController.ReplyMessage(System.Guid,System.Guid,System.Guid,Proact.Services.Models.Messages.MessageRequestData)">
+            <summary>
+            Reply to a Message
+            </summary>
+            <param name="projectId">Project identifier</param>
+            <param name="medicalTeamId">Medical team identifier</param>
+            <param name="originalMessageId">Id of the original message to reply</param>
+            <param name="messageData">Message information</param>
+            <returns>Message information</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.MessagesController.CreateBroadcastMessage(System.Guid,System.Guid,Proact.Services.Models.Messages.MessageRequestData)">
+            <summary>
+            Send a Broadcast Message
+            </summary>
+            <param name="projectId">Project identifier</param>
+            <param name="medicalTeamId">Medical team identifier</param>
+            <param name="messageData">Message information</param>
+            <returns>Message information</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.MessagesController.DeleteMessage(System.Guid,System.Guid,System.Guid)">
+            <summary>
+            Delete the message
+            </summary>
+            <param name="projectId">Project identifier</param>
+            <param name="medicalTeamId">Medical team identifier</param>
+            <param name="messageId">Message identifier</param>
+        </member>
+        <member name="M:Proact.Services.Controllers.NursesController.CreateNurse(Proact.Services.Models.CreateNurseRequest)">
+            <summary>
+            Create a Nurse
+            </summary>
+            <param name="request">Request model to create Nurse</param>
+            <returns>Nurse informations</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.NursesController.AssignNurseToMedicalTeam(System.Guid,Proact.Services.Models.AssignNurseToMedicalTeamRequest)">
+            <summary>
+            Assign nurse to a Medical Team
+            </summary>
+            <param name="request">Request Body for Medical Team Assign</param>
+            <param name="medicalTeamId">Id of medical team</param>
+            <returns>Medic informations</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.NursesController.GetNurses(System.Guid)">
+            <summary>
+            Get list of nurses assigned to medical team
+            </summary>
+            <param name="medicalTeamId">Medical team identifier</param>
+            <returns>The list of Nurses</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.NursesController.GetNurseAll">
+            <summary>
+            Return the list of Nurses into the System
+            </summary>
+            <returns>Nurse information</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.NursesController.RemoveNurseFromMedicalTeam(System.Guid,System.Guid)">
+            <summary>
+            Delete nurse from medical team
+            </summary>
+            <param name="medicalTeamId">Medical team identifier</param>
+            <param name="userId">User identifier of a medic</param>
+        </member>
+        <member name="M:Proact.Services.Controllers.PatientController.GetPatientsFromMedicalTeam(System.Guid)">
+            <summary>
+            Returns a list of patients associated with specified medical team
+            </summary>
+            <param name="medicalTeamId">Medical team identifier</param>
+            <returns>The list of patients of a medical team</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.PatientController.GetPatientsFromProject(System.Guid)">
+            <summary>
+            Returns a list of patients associated within a Project
+            </summary>
+            <param name="projectId">Project identifier</param>
+            <returns>The list of patients within a Project</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.PatientController.GetPatientsAll">
+            <summary>
+            Returns a list of patients into the system
+            </summary>
+            <returns>The list of patients of a medical team</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.PatientController.GetPatient(System.Guid,System.Guid)">
+            <summary>
+            Get patient information
+            </summary>
+            <param name="medicalTeamId">Medical team identifier</param>
+            <param name="userId">User identifier of a patient</param>
+            <returns>Patient information</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.PatientController.CreatePatient(Proact.Services.Models.PatientCreateRequest)">
+            <summary>
+            Create a Patient
+            </summary>
+            <param name="patientCreationRequest">Data for patient creation</param>
+            <returns>Patient information</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.PatientController.SuspendExpiredPatients">
+            <summary>
+            Suspend patients with dei treatment expired
+            </summary>
+        </member>
+        <member name="M:Proact.Services.Controllers.PatientController.AssignPatientToMedicalTeam(System.Guid,Proact.Services.AssignPatientToMedicalTeamRequest)">
+            <summary>
+            Assign patient to a Medical Team
+            </summary>
+            <param name="medicalTeamId">Medical team identifier</param>
+            <param name="assignData">Data for patient assegnation</param>
+            <returns>Patient information</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.PatientController.RemovePatientFromMedicalTeam(System.Guid,System.Guid)">
+            <summary>
+            Remove patient from medical team
+            </summary>
+            <param name="medicalTeamId">Medical team identifier</param>
+            <param name="userId">User identifier of a patient</param>
+        </member>
+        <member name="M:Proact.Services.Controllers.ProjectContactsController.SetContactsForProject(System.Guid,Proact.Services.Models.ProjectHtmlContentCreationRequest)">
+            <summary>
+            Upload terms and conditions file for an Institute
+            </summary>
+            <param name="projectId">Project Identifier</param>
+            <param name="request">Body of the request</param>
+            <returns>contacts information</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.ProjectContactsController.GetContactsForProject(System.Guid)">
+            <summary>
+            Get project contacts html informations
+            </summary>
+            <param name="projectId">Project Identifier</param>
+            <returns>contacts information</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.ProjectEmailsBodiesController.SetEmailBodyForUserWelcome(System.Guid,Proact.Services.Models.ProjectHtmlContentCreationRequest)">
+            <summary>
+            Upload user welcome email html content
+            </summary>
+            <param name="projectId">Project Identifier</param>
+            <param name="request">Body of the request</param>
+            <returns>html body</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.ProjectEmailsBodiesController.GetEmailBodyForUserWelcome(System.Guid)">
+            <summary>
+            Get project html body for user welcome email
+            </summary>
+            <param name="projectId">Project Identifier</param>
+            <returns>html body</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.ProjectEmailsBodiesController.SetEmailBodyForUserSuspended(System.Guid,Proact.Services.Models.ProjectHtmlContentCreationRequest)">
+            <summary>
+            Upload user suspended email html content
+            </summary>
+            <param name="projectId">Project Identifier</param>
+            <param name="request">Body of the request</param>
+            <returns>html body</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.ProjectEmailsBodiesController.GetEmailBodyForUserSuspended(System.Guid)">
+            <summary>
+            Get project html body for user suspended email
+            </summary>
+            <param name="projectId">Project Identifier</param>
+            <returns>html body</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.ProjectEmailsBodiesController.SetEmailBodyForUserDeactivated(System.Guid,Proact.Services.Models.ProjectHtmlContentCreationRequest)">
+            <summary>
+            Upload user deactivated email html content
+            </summary>
+            <param name="projectId">Project Identifier</param>
+            <param name="request">Body of the request</param>
+            <returns>html body</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.ProjectEmailsBodiesController.GetEmailBodyForUserDeactivated(System.Guid)">
+            <summary>
+            Get project html body for user deactivated email
+            </summary>
+            <param name="projectId">Project Identifier</param>
+            <returns>html body</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.ProjectPropertiesController.Create(System.Guid,Proact.Services.Models.ProjectPropertiesCreateRequest)">
+            <summary>
+            Creates properties for an existing project
+            </summary>
+            <param name="projectId">Project identifier</param>
+            <param name="request">Body of request</param>
+            <returns>Project Properties informations</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.ProjectPropertiesController.Update(System.Guid,Proact.Services.Models.ProjectPropertiesUpdateRequest)">
+            <summary>
+            Update properties for an existing project
+            </summary>
+            <param name="projectId">Project identifier</param>
+            <param name="request">Body of request</param>
+            <returns>Project Properties informations</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.ProjectPropertiesController.Get(System.Guid)">
+            <summary>
+            Get properties for an existing project
+            </summary>
+            <param name="projectId">Project identifier</param>
+            <returns>Project Properties informations</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.ProjectPropertiesController.AddLexiconToProject(System.Guid,Proact.Services.Models.LexiconAssignationRequest)">
+            <summary>
+            Add a Lexicon of terms to a Project
+            </summary>
+            <param name="projectId">project identifier</param>
+            <param name="request">Request body for lexicon assignation</param>
+        </member>
+        <member name="M:Proact.Services.Controllers.ProjectsController.CreateProject(Proact.Services.Models.ProjectCreateRequest)">
+            <summary>
+            Creates a new project in Open state"
+            </summary>
+            <param name="projectCreateRequest">Project information</param>
+            <returns>Project information</returns>
+            <response code="201">Returns the newly created item</response>
+        </member>
+        <member name="M:Proact.Services.Controllers.ProjectsController.UpdateProject(System.Guid,Proact.Services.Models.ProjectUpdateRequest)">
+            <summary>
+            Update project information
+            </summary>
+            <param name="projectId">Project identifier</param>
+            <param name="projectUpdateRequest">New project information</param>
+            <returns>Project information</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.ProjectsController.CloseProject(System.Guid)">
+            <summary>
+            Close Project
+            </summary>
+            <param name="projectId">Project identifier</param>
+        </member>
+        <member name="M:Proact.Services.Controllers.ProjectsController.ReOpenProject(System.Guid)">
+            <summary>
+            Open Project
+            </summary>
+            <param name="projectId">Project identifier</param>
+        </member>
+        <member name="M:Proact.Services.Controllers.ProjectsController.GetProject(System.Guid)">
+            <summary>
+            Gets the project info by its identifier
+            </summary>
+            <param name="projectId">The identifier of the project</param>
+            <returns>Project information</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.ProjectsController.GetProjectsWhereImAssociated">
+            <summary>
+            Provides a list of projects current user participates in
+            </summary>
+            <returns>List of projects</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.ProjectsController.GetProjectsAll">
+            <summary>
+            Provides a list of projects current user participates in
+            </summary>
+            <returns>List of projects</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.ProjectsController.GetProjectAdmin(System.Guid)">
+            <summary>
+            Get info of user administrating specified project
+            </summary>
+            <param name="projectId">Project identifier</param>
+            <returns>Administrator information</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.ProjectsController.AssignAdminToProject(System.Guid,System.Guid)">
+            <summary>
+            Assign a user as project administrator
+            </summary>
+            <param name="projectId">Project identifier</param>
+            <param name="userId">UserId</param>
+            <returns>Administrator information</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.PushNotificationsController.RegisterDevice(Proact.Services.Models.DeviceRegistrationRequest)">
+            <summary>
+            Register device for push notification
+            </summary>
+            <param name="request">Body of request</param>
+            <returns>Ok</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.PushNotificationsController.RemoveDevice(System.Guid)">
+            <summary>
+            Remove device from push notification
+            </summary>
+            <returns>Ok</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.PushNotificationsController.ActiveNotification(Proact.Services.Models.ActiveNotificationRequest)">
+            <summary>
+            Active or deactive Push Notification for an user
+            </summary>
+            <param name="request">Body of request</param>
+            <returns>Ok</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.PushNotificationsController.SetNotificationDayAsAllDay">
+            <summary>
+            Reset notification settings
+            </summary>
+            <returns>Ok</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.PushNotificationsController.SetNotificationsRange(Proact.Services.Models.SetNotificationRangeRequest)">
+            <summary>
+            Set notifications Range
+            </summary>
+            <param name="request">Body of request</param>
+            <returns>Ok</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.PushNotificationsController.GetNotificationsSettings">
+            <summary>
+            Get Notifications Settings
+            </summary>
+            <returns>Ok</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.ResearchersController.GetResearchers(System.Guid)">
+            <summary>
+            Get list of researcher assigned to medical team
+            </summary>
+            <param name="medicalTeamId">Medical team identifier</param>
+            <returns>The list of medics</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.ResearchersController.Get(System.Guid,System.Guid)">
+            <summary>
+            Get researcher information
+            </summary>
+            <param name = "medicalTeamId"> Medical team identifier</param>
+            <param name = "userId"> User identifier of a medic</param>
+            <returns>Medic information</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.ResearchersController.GetAll">
+            <summary>
+            Return the list of Researcher into the institute
+            </summary>
+            <returns>Medic information</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.ResearchersController.Create(Proact.Services.Models.CreateResearcherRequest)">
+            <summary>
+            Create a Researcher
+            </summary>
+            <param name="createResearcherRequest">Request model to create Researcher</param>
+            <returns>Researcher informations</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.ResearchersController.AssignToMedicalTeam(System.Guid,Proact.Services.Models.AssignResearcherToMedicalTeamRequest)">
+            <summary>
+            Assign researcher to a Medical Team
+            </summary>
+            <param name="request">Request Body for Medical Team Assign</param>
+            <param name="medicalTeamId">Id of medical team</param>
+            <returns>Researcher informations</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.ResearchersController.RemoveFromMedicalTeam(System.Guid,System.Guid)">
+            <summary>
+            Delete researcher from medical team
+            </summary>
+            <param name="medicalTeamId">Medical team identifier</param>
+            <param name="userId">User identifier of a medic</param>
+        </member>
+        <member name="M:Proact.Services.Controllers.Settings.ApplicationVersionController.CreateAppSettings(Proact.Services.Models.MobileAppsInfoCreationRequest)">
+            <summary>
+            Set minimum version for iOS and Android App 
+            </summary>
+            <param name="request">body of request</param>
+        </member>
+        <member name="M:Proact.Services.Controllers.Settings.ApplicationVersionController.GetAppSettings">
+            <summary>
+            Returns informations about the minimum version of mobile applications requested
+            </summary>
+        </member>
+        <member name="M:Proact.Services.Controllers.Stats.StatsController.GetMessagesStats">
+            <summary>
+            Get message stats present into PROACT
+            </summary>
+        </member>
+        <member name="M:Proact.Services.Controllers.Stats.StatsController.GetMessagesStatsForInstitute(System.Guid)">
+            <summary>
+            Get message stats present into an institute
+            </summary>
+        </member>
+        <member name="M:Proact.Services.Controllers.Stats.StatsController.GetMessagesStatsForProject(System.Guid)">
+            <summary>
+            Get message stats present into a project/study
+            </summary>
+        </member>
+        <member name="M:Proact.Services.Controllers.Surveys.SurveyAnswersBlocksController.CreateAnswerBlock(System.Guid,Proact.Services.Models.AnswersBlockCreationRequest)">
+            <summary>
+            Create a new block of answers
+            </summary>
+            <param name="projectId">Project Identifier</param>
+            <param name="request">Creation request params</param>
+            <returns>Answer created</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.Surveys.SurveyAnswersBlocksController.GetAnswersBlocks(System.Guid)">
+            <summary>
+            Get list of answers blocks within a project
+            </summary>
+            <param name="projectId">Project Identifier</param>
+            <returns>Answer created</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.Surveys.SurveyAnswersBlocksController.GetAnswersBlock(System.Guid)">
+            <summary>
+            Get single answer block
+            </summary>
+            <param name="answersBlockId">Id of Answers Block</param>
+            <returns>Answer created</returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Proact.Services.Controllers.Surveys.SurveyAssegnationsController.AssignSurveyToPatients(System.Guid,Proact.Services.Models.CreateScheduledSurveyRequest)" -->
+        <member name="M:Proact.Services.Controllers.Surveys.SurveyAssegnationsController.GetSurveysAssignedToPatient(System.Guid)">
+            <summary>
+            Get Survey Assignments
+            </summary>
+            <param name="userId">UserId of patient</param>
+            <returns>Surveys Assignments</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.Surveys.SurveyAssegnationsController.GetSurveysAssignedToMe">
+            <summary>
+            Get Survey Assigned to me
+            </summary>
+            <returns>Surveys Assignments</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.Surveys.SurveyAssegnationsController.GetCompletedSurveysAssignedToMe">
+            <summary>
+            Get Survey Assignments completed only
+            </summary>
+            <returns>Surveys completed by a patient</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.Surveys.SurveyAssegnationsController.GetCompletedSurveysAssignedToPatient(System.Guid)">
+            <summary>
+            Get Survey Assignments completed only
+            </summary>
+            <param name="userId">UserId of patient</param>
+            <returns>Surveys completed by a patient</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.Surveys.SurveyAssegnationsController.GetNotCompletedSurveysAssignedToMe">
+            <summary>
+            Get Surveys that patient must compile now
+            </summary>
+            <returns>Surveys that patient must compile now</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.Surveys.SurveyAssegnationsController.GetNotCompletedSurveysAssignedToPatient(System.Guid)">
+            <summary>
+            Get Survey Assignments not completed only
+            </summary>
+            <param name="userId">UserId of patient</param>
+            <returns>Surveys not completed by a patient</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.Surveys.SurveyAssegnationsController.GetPatientsAssignedToSurvey(System.Guid)">
+            <summary>
+            Get Patients assigned to a Survey
+            </summary>
+            <param name="surveyId">Id of the Survey</param>
+            <returns>Patients assigned to a Survey</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.Surveys.SurveyAssegnationsController.SetCompiledSurvey(System.Guid,System.Guid,Proact.Services.Models.SurveyCompileRequest)">
+            <summary>
+            Answer to a Survey
+            </summary>
+            <param name="surveyId">Id of the Survey</param>
+            <param name="assegnationId">Id of the Survey Assignation</param>
+            <param name="request">Request params to set the answer</param>
+            <returns>Assignment of Survey</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.Surveys.SurveyAssegnationsController.GetCompiledSurveyFromPatient(System.Guid)">
+            <summary>
+            Get the compiled survey from the user
+            </summary>
+            <param name="assegnationId">Id of instance Survey assigned</param>
+            <returns>Assignment of Survey</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.Surveys.SurveyAssegnationsController.GetMyCompiledSurveyFromPatient(System.Guid)">
+            <summary>
+            Get the compiled survey from the user
+            </summary>
+            <param name="assegnationId">Id of instance Survey assigned</param>
+            <returns>Assignment of Survey</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.Surveys.SurveyController.CreateSurvey(System.Guid,Proact.Services.SurveyCreationRequest)">
+            <summary>
+            Create a new Survey
+            </summary>
+            <param name="projectId">Project Identifier</param>
+            <param name="request">Creation request params</param>
+            <returns>Survey created</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.Surveys.SurveyController.EditSurvey(System.Guid,Proact.Services.SurveyEditRequest)">
+            <summary>
+            Edit Survey 
+            </summary>
+            <param name="surveyId">Suvey idetifier</param>
+            <param name="request">Body of request</param>
+            <returns>Survey Model</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.Surveys.SurveyController.DeleteSurvey(System.Guid)">
+            <summary>
+            Delete Survey by id
+            </summary>
+            <returns>Deleted Survey</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.Surveys.SurveyController.GetSurveys(System.Guid)">
+            <summary>
+            Get Surveys
+            </summary>
+            <param name="projectId">Project Identifier</param> 
+            <returns>Surveys created</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.Surveys.SurveyController.GetSurvey(System.Guid)">
+            <summary>
+            Get Survey by id
+            </summary>
+            <param name="surveyId">Survey Identifier</param> 
+            <returns>Survey requested</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.Surveys.SurveyController.GetSurveyStats(System.Guid)">
+            <summary>
+            Get the stats for a survey
+            </summary>
+            <param name="surveyId">Id of the Surveys</param>
+            <returns>Stats of Survey</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.Surveys.SurveyController.GetSurveyStatsOverTimeForPatient(System.Guid,System.Guid)">
+            <summary>
+            Get the stats over the time about a patient
+            </summary>
+            <param name="surveyId">Id of the Surveys</param>
+            <param name="userId">Id of the User</param>
+            <returns>Stats of Survey</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.Surveys.SurveysSchedulerCheckController.CheckScheduledSurveys">
+            <summary>
+            Send notifications to scheduled surveys
+            </summary>
+        </member>
+        <member name="M:Proact.Services.Controllers.Surveys.SurveysSchedulerCheckController.CheckReminderScheduledSurveys">
+            <summary>
+            Send reminder for unanswered scheduled surveys
+            </summary>
+        </member>
+        <member name="M:Proact.Services.Controllers.SurveysQuestionsController.CreateRatingQuestion(System.Guid,Proact.Services.Models.RatingQuestionCreationRequest)">
+            <summary>
+            Create a new Rating Question within a Questions Set
+            </summary>
+            <param name="questionsSetId">Id of Questions Set</param>
+            <param name="request">Creation request params</param>
+            <returns>Question created</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.SurveysQuestionsController.EditRatingQuestion(System.Guid,Proact.Services.Models.RatingQuestionEditRequest)">
+            <summary>
+            Edit Rating Question within a Questions Set
+            </summary>
+            <param name="questionsSetId">Id of Questions Set</param>
+            <param name="request">Creation request params</param>
+            <returns>Question created</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.SurveysQuestionsController.CreateOpenQuestion(System.Guid,Proact.Services.Models.OpenQuestionCreationRequest)">
+            <summary>
+            Create a new Open Question within a Questions Set
+            </summary>
+            <param name="questionsSetId">Id of Questions Set</param>
+            <param name="request">Creation request params</param>
+            <returns>Question edited</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.SurveysQuestionsController.EditOpenQuestion(System.Guid,Proact.Services.Models.OpenQuestionEditRequest)">
+            <summary>
+            Edit Open Question within a Questions Set
+            </summary>
+            <param name="questionsSetId">Id of Questions Set</param>
+            <param name="request">Creation request params</param>
+            <returns>Question edited</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.SurveysQuestionsController.CreateSingleChoiceQuestion(System.Guid,Proact.Services.Models.SingleChoiceCreationRequest)">
+            <summary>
+            Create a new Single Choice Question within a Questions Set
+            </summary>
+            <param name="questionsSetId">Id of Questions Set</param>
+            <param name="request">Creation request params</param>
+            <returns>Question created</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.SurveysQuestionsController.EditSingleChoiceQuestion(System.Guid,Proact.Services.Models.SingleChoiceEditRequest)">
+            <summary>
+            Edit Single Choice Question within a Questions Set
+            </summary>
+            <param name="questionsSetId">Id of Questions Set</param>
+            <param name="request">Creation request params</param>
+            <returns>Question created</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.SurveysQuestionsController.CreateMultipleChoiceQuestion(System.Guid,Proact.Services.Models.MultipleChoiceCreationRequest)">
+            <summary>
+            Create a new Multiple Choice Question within a Questions Set
+            </summary>
+            <param name="questionsSetId">Id of Questions Set</param>
+            <param name="request">Creation request params</param>
+            <returns>Question edited</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.SurveysQuestionsController.EditedMultipleChoiceQuestion(System.Guid,Proact.Services.Models.MultipleChoiceEditRequest)">
+            <summary>
+            Edit Multiple Choice Question within a Questions Set
+            </summary>
+            <param name="questionsSetId">Id of Questions Set</param>
+            <param name="request">Creation request params</param>
+            <returns>Question edited</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.SurveysQuestionsController.CreateBoolQuestion(System.Guid,Proact.Services.Models.BoolQuestionCreationRequest)">
+            <summary>
+            Create a new Bool Question within a Questions Set
+            </summary>
+            <param name="questionsSetId">Id of Questions Set</param>
+            <param name="request">Creation request params</param>
+            <returns>Question created</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.SurveysQuestionsController.EditBoolQuestion(System.Guid,Proact.Services.Models.BoolQuestionEditRequest)">
+            <summary>
+            Edit a Bool Question within a Questions Set
+            </summary>
+            <param name="questionsSetId">Id of Questions Set</param>
+            <param name="request">Creation request params</param>
+            <returns>Question created</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.SurveysQuestionsController.CreateMoodQuestion(System.Guid,Proact.Services.Models.MoodQuestionCreationRequest)">
+            <summary>
+            Create a new Mood Question within a Questions Set
+            </summary>
+            <param name="questionsSetId">Id of Questions Set</param>
+            <param name="request">Creation request params</param>
+            <returns>Question created</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.SurveysQuestionsController.EditMoodQuestion(System.Guid,Proact.Services.Models.MoodQuestionEditRequest)">
+            <summary>
+            Edit a Bool Question within a Questions Set
+            </summary>
+            <param name="questionsSetId">Id of Questions Set</param>
+            <param name="request">Creation request params</param>
+            <returns>Question created</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.SurveysQuestionsController.DeleteQuestionsSet(System.Guid,System.Guid)">
+            <summary>
+            Delete Questions into questions set
+            </summary>
+            <param name="questionsSetId">Id of questionSet</param>
+            <param name="questionId">Id of question</param>
+            <returns></returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.SurveysQuestionsSetsController.CreateQuestionsSet(System.Guid,Proact.Services.Models.QuestionsSetCreationRequest)">
+            <summary>
+            Create a new Questions Set
+            </summary>
+            <param name="projectId">Project Identifier</param>
+            <param name="request">Questions Set Properties</param>
+            <returns>The Questions Set Container</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.SurveysQuestionsSetsController.GetQuestionsSets(System.Guid)">
+            <summary>
+            Get Questions Sets List
+            </summary>
+            <param name="projectId">Project Identifier</param>
+            <returns>The list of Questions Sets</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.SurveysQuestionsSetsController.GetQuestionsSet(System.Guid)">
+            <summary>
+            Get Questions Set Details
+            </summary>
+            <param name="questionsSetId">df of questions set</param>
+            <returns>The list of medics</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.SurveysQuestionsSetsController.EditQuestionsSet(System.Guid,Proact.Services.Models.QuestionsSetEditRequest)">
+            <summary>
+            Edit Questions Set
+            </summary>
+            <param name="request">Questions Set Properties</param>
+            <param name="questionsSetId">Id of Questions Set</param>
+            <returns></returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.SurveysQuestionsSetsController.DeleteQuestionsSet(System.Guid)">
+            <summary>
+            Delete Questions Set
+            </summary>
+            <param name="questionsSetId">If of questions set</param>
+            <returns></returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.SurveysQuestionsSetsController.PublishQuestionsSet(System.Guid)">
+            <summary>
+            Set Questions Set as approved
+            </summary>
+            <param name="questionsSetId">Questions Set Identifier</param>
+            <returns>200 Ok</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.System.SystemConfigurationController.InitializeSystem(Proact.Services.Models.SystemInitializationRequest)">
+            <summary>
+            Initialize system and create a System Admin User
+            </summary>
+            <param name="request">System Admin information</param>
+            <returns>User information</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.System.SystemConfigurationController.CheckRequestLanguage">
+            <summary>
+            Culture request check
+            </summary>
+        </member>
+        <member name="M:Proact.Services.Controllers.System.SystemConfigurationController.GetServerInfo">
+            <summary>
+            Check Server Info
+            </summary>
+        </member>
+        <member name="M:Proact.Services.Controllers.UserAvatarController.UploadAvatar(Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            Upload user avatar
+            </summary>
+            <param name="avatarFile">Media File</param>
+        </member>
+        <member name="M:Proact.Services.Controllers.UserAvatarController.ResetAvatar">
+            <summary>
+            Reset User Avatar
+            </summary>
+        </member>
+        <member name="M:Proact.Services.Controllers.Users.UsersController.CreateUser(Proact.Services.Models.UserCreateRequest)">
+            <summary>
+            Create a new user
+            </summary>
+            <param name="request">User information</param>
+            <returns>User information</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.Users.UsersController.AssignRole(Proact.Services.AssignRoleToUserRequest)">
+            <summary>
+            Assign a role to a user
+            </summary>
+            <param name="assignData">UserId and Role name</param>
+        </member>
+        <member name="M:Proact.Services.Controllers.Users.UsersController.GetUsers">
+            <summary>
+            Provides a list of users
+            </summary>
+            <returns>List of users</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.Users.UsersController.GetUser(System.Guid)">
+            <summary>
+            Gets user info info by its identifier
+            </summary>
+            <param name="userId">The identifier of the user</param>
+            <returns>User information</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.Users.UsersController.GetUser">
+            <summary>
+            Gets current user data info
+            </summary>
+            <returns>User information</returns>
+        </member>
+        <member name="M:Proact.Services.Controllers.Users.UsersController.DeleteUser(System.Guid)">
+            <summary>
+             Delete a user from proact db and remove Azure AD user
+            </summary>
+            <param name="userId">User identifier</param>
+        </member>
+        <member name="M:Proact.Services.Controllers.Users.UsersController.ActivateUser(System.Guid)">
+            <summary>
+            Active a user and enable azure AD signin 
+            </summary>
+            <param name="userId">User identifier</param>
+        </member>
+        <member name="M:Proact.Services.Controllers.Users.UsersController.SuspendPatient(System.Guid)">
+            <summary>
+            Suspend a patient from proact db and disable Azure AD signin
+            </summary>
+            <param name="userId">User identifier</param>
+        </member>
+        <member name="M:Proact.Services.Controllers.Users.UsersController.DeactivatePatient(System.Guid)">
+            <summary>
+            Disable a patient from proact db and disable Azure AD signin
+            </summary>
+            <param name="userId">User identifier</param>
+        </member>
+        <member name="F:Proact.Services.Models.ErrorModel.Message">
+            <summary>
+            The error message in plain text
+            </summary>
+            <example>This is an error message!</example>
+        </member>
+        <member name="F:Proact.Services.Models.ErrorModel.Code">
+            <summary>
+            The error code
+            </summary>
+        </member>
+        <member name="M:Proact.Services.Models.ErrorModel.#ctor(Proact.Services.Models.ErrorCode,System.String)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+    </members>
+</doc>

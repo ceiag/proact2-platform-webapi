@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "storage1": {
+      "type": "storage",
+      "connectionId": "ProactServicesLogsConnectionString"
+    },
+    "apis1": {
+      "type": "apis"
+    },
+    "mssql1": {
+      "type": "mssql",
+      "connectionId": "ConnectionStrings:DefaultConnection"
+    }
+  }
+}

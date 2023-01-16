@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Proact.EncryptionAgentService</name>
+    </assembly>
+    <members>
+        <member name="M:Proact.EncryptionAgentService.Controllers.MessageDataController.StoreTextMessage(Proact.EncryptionAgentService.Models.CreateMessageDataRequest)">
+            <summary>
+            Store a new message
+            </summary>
+            <param name="messageDataModel">CreateMessageDataModel</param>
+            <returns>Message information</returns>
+        </member>
+        <member name="M:Proact.EncryptionAgentService.Controllers.MessageDataController.EditTextMessage(Proact.EncryptionAgentService.Models.CreateMessageDataRequest)">
+            <summary>
+            Edit a message from a conversation
+            </summary>
+            <param name="messageDataModel">CreateMessageDataModel</param>
+            <returns>Message information</returns>
+        </member>
+        <member name="M:Proact.EncryptionAgentService.Controllers.MessageDataController.GetAllMessages">
+            <summary>
+            Retrive all messages
+            </summary>
+            <returns>Message information</returns>
+        </member>
+        <member name="M:Proact.EncryptionAgentService.Controllers.MessageDataController.GetMessagesUsingIds(Proact.EncryptionAgentService.Models.MessageParameterModel[])">
+            <summary>
+            Return messages with given Ids
+            </summary>
+            <returns>List of Messages</returns>
+        </member>
+        <member name="M:Proact.EncryptionAgentService.Controllers.MessageDataController.GetMessageFromId(System.Guid)">
+            <summary>
+            Return message with given Id
+            </summary>
+            <returns>Message</returns>
+        </member>
+        <member name="M:Proact.EncryptionAgentService.Controllers.SecurityController.GetPublicKeyForMessageEncryption">
+            <summary>
+            Return RSA Public Key
+            </summary>
+        </member>
+    </members>
+</doc>

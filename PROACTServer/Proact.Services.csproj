@@ -1,0 +1,123 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <UserSecretsId>aspnet-PROACTServer-E7C62836-0C1E-4300-B889-1CFDDFFAB4A6</UserSecretsId>
+    <NoWarn>1591</NoWarn>
+    <Version>1.2</Version>
+    <AssemblyVersion>1.0.5</AssemblyVersion>
+    <FileVersion>1.0.5</FileVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>.\Proact.Services.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'PROACTServer' " />
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Proact.Services.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="QueriesServices\Devices\**" />
+    <Compile Remove="TempVideos\**" />
+    <Content Remove="QueriesServices\Devices\**" />
+    <Content Remove="TempVideos\**" />
+    <EmbeddedResource Remove="QueriesServices\Devices\**" />
+    <EmbeddedResource Remove="TempVideos\**" />
+    <None Remove="QueriesServices\Devices\**" />
+    <None Remove="TempVideos\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.11.0" />
+    <PackageReference Include="Azure.Storage.Files.Shares" Version="12.9.0" />
+    <PackageReference Include="Azure.Storage.Queues" Version="12.9.0" />
+    <PackageReference Include="FFMpegCore" Version="4.8.0" />
+    <PackageReference Include="Hangfire.AspNetCore" Version="1.7.29" />
+    <PackageReference Include="Hangfire.Console" Version="1.4.2" />
+    <PackageReference Include="Hangfire.Core" Version="1.7.30" />
+    <PackageReference Include="Hangfire.Dashboard.BasicAuthorization" Version="1.0.2" />
+    <PackageReference Include="Hangfire.SqlServer" Version="1.7.30" />
+    <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.11" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="6.0.11" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.11" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Azure.Management.Media" Version="6.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.11" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="6.0.11" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.11" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.11">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Azure" Version="1.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging.AzureAppServices" Version="6.0.11" />
+    <PackageReference Include="Microsoft.Identity.Web" Version="1.23.1" />
+    <PackageReference Include="Microsoft.IdentityModel.Clients.ActiveDirectory" Version="5.2.9" />
+    <PackageReference Include="Microsoft.Owin" Version="4.2.0" />
+    <PackageReference Include="Microsoft.Rest.ClientRuntime.Azure.Authentication" Version="2.4.1" />
+    <PackageReference Include="NAudio" Version="2.1.0" />
+    <PackageReference Include="NAudio.Core" Version="2.1.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="NReco.VideoConverter.LT" Version="1.1.4" />
+    <PackageReference Include="SixLabors.ImageSharp" Version="2.1.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.3.0" />
+    <PackageReference Include="Microsoft.Graph" Version="4.23.0" />
+    <PackageReference Include="Microsoft.Graph.Auth" Version="1.0.0-preview.6" />
+    <PackageReference Include="System.Linq.Expressions" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Localization\" />
+    <Folder Include="Properties\PublishProfiles\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\Resource.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.en-US.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Resource.it-IT.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.it-IT.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Resource.de-DE.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.de-DE.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Resource.fr-FR.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.fr-FR.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Resource.es-ES.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.es-ES.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Resource.nl-NL.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.nl-NL.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Resources\Resource.en-US.Designer.cs">
+      <DependentUpon>Resource.en-US.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\Resource.it-IT.Designer.cs">
+      <DependentUpon>Resource.it-IT.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\Resource.de-DE.Designer.cs">
+      <DependentUpon>Resource.de-DE.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\Resource.fr-FR.Designer.cs">
+      <DependentUpon>Resource.fr-FR.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\Resource.es-ES.Designer.cs">
+      <DependentUpon>Resource.es-ES.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\Resource.nl-NL.Designer.cs">
+      <DependentUpon>Resource.nl-NL.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,39 @@
+Proact.EncryptionAgentService.Models/bin
+Proact.EncryptionAgentService.Models/obj
+PROACTServer/bin
+PROACTServer/obj
+.vs/Proact.Services/v16
+.vs/PROACTServer/v16
+.vs/PROACTServer/DesignTimeBuild
+.vs
+Proact.Common/bin
+Proact.Common/obj
+Proact.Common/obj
+/Proact.Services.UnitTests/bin/Debug/net5.0
+/Proact.Services.UnitTests/obj
+/proact-platform-webapi-unit-tests/obj
+PROACTServer/C:/Work/Dev/Server/PROACTServer/PROACTServer/Proact.Services.xml
+Proact.EncryptionAgentService/bin
+Proact.EncryptionAgentService/obj
+Proact.Services.UnitTests/bin
+Proact.EncryptionAgentService.UnitTests/bin
+Proact.EncryptionAgentService.UnitTests/obj
+Proact.Services.Unit_Tests/bin
+Proact.Services.Unit_Tests/obj
+*.exe
+.idea
+Proact.Service.Tests.Shared/obj
+Proact.Services.FunctionalTests/obj
+Proact.Services.Tests.Shared/bin
+Proact.Services.Tests.Shared/obj
+Proact.Services.FunctionalTests/bin
+/Proact.Services.IntegrationTests/bin/Debug/net6.0
+/Proact.Services.IntegrationTests/obj
+PROACTServer/Properties/PublishProfiles/DEVProactServices - Web Deploy.pubxml.user
+PROACTServer/Properties/PublishProfiles
+/PROACTServer/appsettings.development.json
+/Proact.EncryptionAgentService/Properties/serviceDependencies.ProactServices20210407153022 - Web Deploy.json.user
+/Proact.EncryptionAgentService/Properties/serviceDependencies.ProactServices20210407153022 - Web Deploy.json
+/Proact.EncryptionAgentService/Properties/serviceDependencies.ProactEncryptionAgent - Web Deploy.json.user
+/Proact.EncryptionAgentService/Properties/serviceDependencies.ProactEncryptionAgent - Web Deploy.json
+/.config

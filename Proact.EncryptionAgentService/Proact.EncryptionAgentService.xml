@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Proact.EncryptionAgentService</name>
+    </assembly>
+    <members>
+        <member name="M:Proact.EncryptionAgentService.Controllers.MessageDataController.StoreTextMessage(Proact.EncryptionAgentService.Models.CreateMessageDataModel)">
+            <summary>
+            Store a new patient message
+            </summary>
+            <param name="messageDataModel">CreateMessageDataModel</param>
+            <returns>Message information</returns>
+        </member>
+    </members>
+</doc>
